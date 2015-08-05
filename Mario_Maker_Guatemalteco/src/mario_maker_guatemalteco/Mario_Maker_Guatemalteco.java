@@ -16,8 +16,10 @@ public class Mario_Maker_Guatemalteco {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("comenzando");
-        System.out.println("alfin subiooo jajajjaajajaja mañana sigo jajajajajaja");
+
+        Inicio comenzando = new Inicio ();
+        comenzando.setVisible(true);
+        comenzando.show();
     }
     
 }
