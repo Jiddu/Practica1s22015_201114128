@@ -11,6 +11,8 @@ package mario_maker_guatemalteco;
  */
 public class CargadeObjetos extends javax.swing.JFrame {
 
+    static Listadoble listitadepersonajes = new Listadoble();
+    
     /**
      * Creates new form CargadeObjetos
      */
@@ -28,79 +30,146 @@ public class CargadeObjetos extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        btsuelo = new javax.swing.JButton();
+        btnpared = new javax.swing.JButton();
+        txtsuelo = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtpared = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
+        btngoomba = new javax.swing.JButton();
+        txtgoomba = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jTextField4 = new javax.swing.JTextField();
+        btnkoopa = new javax.swing.JButton();
+        txtkoopa = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        btnficha = new javax.swing.JButton();
+        btnhongo = new javax.swing.JButton();
+        btnmario = new javax.swing.JButton();
+        btncastillo = new javax.swing.JButton();
+        txtficha = new javax.swing.JTextField();
+        txthongo = new javax.swing.JTextField();
+        txtmario = new javax.swing.JTextField();
+        txtcastillo = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/Suelo.png"))); // NOI18N
         jLabel1.setText("SUELO");
 
-        jButton1.setText("AGREGAR");
+        btsuelo.setText("AGREGAR");
+        btsuelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btsueloActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("AGREGAR");
+        btnpared.setText("AGREGAR");
+        btnpared.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnparedActionPerformed(evt);
+            }
+        });
 
-        jTextField1.setText("jTextField1");
+        txtsuelo.setText("suelito");
+        txtsuelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtsueloActionPerformed(evt);
+            }
+        });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/Pared.png"))); // NOI18N
         jLabel2.setText("PARED");
 
-        jTextField2.setText("jTextField2");
+        txtpared.setText("paredita");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/Gomba.png"))); // NOI18N
         jLabel3.setText("GOOMBA");
 
-        jButton3.setText("AGREGAR");
+        btngoomba.setText("AGREGAR");
+        btngoomba.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngoombaActionPerformed(evt);
+            }
+        });
 
-        jTextField3.setText("jTextField3");
+        txtgoomba.setText("goombita");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/Kopa.png"))); // NOI18N
         jLabel4.setText("KOOPA (TORTUGA)");
 
-        jButton4.setText("AGREGAR");
+        btnkoopa.setText("AGREGAR");
+        btnkoopa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkoopaActionPerformed(evt);
+            }
+        });
 
-        jTextField4.setText("jTextField4");
+        txtkoopa.setText("tortuguita");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/ficha.png"))); // NOI18N
         jLabel5.setText("FICHA");
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/hongo.png"))); // NOI18N
         jLabel6.setText("HONGO DE VIDA");
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/mario.png"))); // NOI18N
         jLabel7.setText("MARIO");
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesdeJuego/castillo.png"))); // NOI18N
         jLabel8.setText("CASTILLO");
 
-        jButton5.setText("AGREGAR");
+        btnficha.setText("AGREGAR");
+        btnficha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnfichaActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("AGREGAR");
+        btnhongo.setText("AGREGAR");
+        btnhongo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnhongoActionPerformed(evt);
+            }
+        });
 
-        jButton7.setText("AGREGAR");
+        btnmario.setText("AGREGAR");
+        btnmario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmarioActionPerformed(evt);
+            }
+        });
 
-        jButton8.setText("AGREGAR");
+        btncastillo.setText("AGREGAR");
+        btncastillo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncastilloActionPerformed(evt);
+            }
+        });
 
-        jTextField5.setText("jTextField5");
+        txtficha.setText("fichita");
 
-        jTextField6.setText("jTextField6");
+        txthongo.setText("honguito");
 
-        jTextField7.setText("jTextField7");
+        txtmario.setText("marito");
 
-        jTextField8.setText("jTextField8");
+        txtcastillo.setText("castillito");
+
+        jButton1.setText("pila");
+
+        jButton2.setText("cola");
+
+        jButton3.setText("MOSTRAR OBJETOS LISTA");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -119,23 +188,32 @@ public class CargadeObjetos extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8))
-                .addContainerGap(631, Short.MAX_VALUE))
+                    .addComponent(btsuelo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnpared, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btngoomba, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnkoopa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnficha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnhongo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnmario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btncastillo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtsuelo)
+                    .addComponent(txtpared)
+                    .addComponent(txtgoomba)
+                    .addComponent(txtkoopa)
+                    .addComponent(txtficha)
+                    .addComponent(txthongo)
+                    .addComponent(txtmario)
+                    .addComponent(txtcastillo))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jButton3)))
+                .addGap(274, 274, 274))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,59 +221,119 @@ public class CargadeObjetos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addGap(49, 49, 49)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnpared)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtpared, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(btngoomba))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtgoomba, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4)
+                            .addComponent(btnkoopa))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtkoopa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(btnficha))
+                        .addGap(3, 3, 3)
+                        .addComponent(txtficha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(btnhongo))
+                        .addGap(1, 1, 1)
+                        .addComponent(txthongo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(btnmario))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtmario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(btncastillo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtcastillo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(73, 73, 73)
-                        .addComponent(jButton1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btsuelo)
+                            .addComponent(jButton1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(jButton4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jButton5))
-                .addGap(3, 3, 3)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jButton6))
-                .addGap(1, 1, 1)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jButton7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                        .addComponent(txtsuelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2)
+                        .addGap(106, 106, 106)
+                        .addComponent(jButton3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btsueloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btsueloActionPerformed
+        // TODO add your handling code here:
+        listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtsuelo.getText(),"suelitoo"));
+        
+    }//GEN-LAST:event_btsueloActionPerformed
+
+    private void btnparedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnparedActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtpared.getText(),"pareditaa"));
+    }//GEN-LAST:event_btnparedActionPerformed
+
+    private void btngoombaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngoombaActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtgoomba.getText(),"goombitaa"));
+    }//GEN-LAST:event_btngoombaActionPerformed
+
+    private void btnkoopaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkoopaActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtkoopa.getText(),"tortuguita"));
+    }//GEN-LAST:event_btnkoopaActionPerformed
+
+    private void btnfichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfichaActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtficha.getText(),"fichitaa"));
+    }//GEN-LAST:event_btnfichaActionPerformed
+
+    private void btnhongoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhongoActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txthongo.getText(),"honguito"));
+    }//GEN-LAST:event_btnhongoActionPerformed
+
+    private void btnmarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmarioActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtmario.getText(),"MARITOO"));
+    }//GEN-LAST:event_btnmarioActionPerformed
+
+    private void btncastilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncastilloActionPerformed
+        // TODO add your handling code here:
+         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtcastillo.getText(),"CASTILLOOO"));
+    }//GEN-LAST:event_btncastilloActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+      //  listitadepersonajes.mostrarListainiciofin();
+        PantalladeMostrar mostrarpersonajes = new PantalladeMostrar();
+        mostrarpersonajes.setVisible(true);
+        mostrarpersonajes.show();
+                this.hide();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void txtsueloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsueloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtsueloActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,14 +371,17 @@ public class CargadeObjetos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btncastillo;
+    private javax.swing.JButton btnficha;
+    private javax.swing.JButton btngoomba;
+    private javax.swing.JButton btnhongo;
+    private javax.swing.JButton btnkoopa;
+    private javax.swing.JButton btnmario;
+    private javax.swing.JButton btnpared;
+    private javax.swing.JButton btsuelo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -249,13 +390,13 @@ public class CargadeObjetos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField txtcastillo;
+    private javax.swing.JTextField txtficha;
+    private javax.swing.JTextField txtgoomba;
+    private javax.swing.JTextField txthongo;
+    private javax.swing.JTextField txtkoopa;
+    private javax.swing.JTextField txtmario;
+    private javax.swing.JTextField txtpared;
+    private javax.swing.JTextField txtsuelo;
     // End of variables declaration//GEN-END:variables
 }

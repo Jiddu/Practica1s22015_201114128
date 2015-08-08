@@ -5,28 +5,33 @@
  */
 package mario_maker_guatemalteco;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author asus
  */
-public class Nodo {
+public class Nodo extends JLabel{
     
-     int dato;
-    Nodo Siguiente;
-    Nodo Anterior;
-    
-    
-    
-    public Nodo (int P){
-    dato = P;
-    this.Siguiente = null;
-    this.Anterior = null;
-    }
-    
-     
-    public Nodo (int P, Nodo n){
-    dato = P;
-    this.Siguiente = n;
-    this.Anterior = n;
+Personaje personaje ;
+Nodo siguiente;
+Nodo anterior;
+
+public Nodo (Personaje personaje){
+this.personaje = personaje;
+this.siguiente = null;
+this.anterior = null;
+
 }
+
+public Nodo (Personaje personaje, Nodo siguiente, Nodo anterior){
+
+this.personaje = personaje;
+this.siguiente = siguiente;
+this.anterior = anterior;
+
+}
+
+
+
 }
