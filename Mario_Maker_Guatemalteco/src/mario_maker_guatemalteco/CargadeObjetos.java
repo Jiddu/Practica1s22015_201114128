@@ -5,6 +5,9 @@
  */
 package mario_maker_guatemalteco;
 
+import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author asus
@@ -12,14 +15,27 @@ package mario_maker_guatemalteco;
 public class CargadeObjetos extends javax.swing.JFrame {
 
     static Listadoble listitadepersonajes = new Listadoble();
+    static boolean pilacola = true;
     
     /**
      * Creates new form CargadeObjetos
      */
     public CargadeObjetos() {
         initComponents();
+        PcargaObjetos carga = new PcargaObjetos();
+       this.add(carga,BorderLayout.CENTER);
+                this.pack();
+                 this.setSize(1280,957);
+        
+        
     }
 
+    
+    
+       boolean verificadormarito = true ;
+         boolean verificadorcastillito = true ;
+         
+         
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -161,8 +177,18 @@ public class CargadeObjetos extends javax.swing.JFrame {
         txtcastillo.setText("castillito");
 
         jButton1.setText("pila");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("cola");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("MOSTRAR OBJETOS LISTA");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -206,14 +232,16 @@ public class CargadeObjetos extends javax.swing.JFrame {
                     .addComponent(txtcastillo))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)))
+                        .addGap(214, 214, 214)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
+                        .addGap(150, 150, 150)
                         .addComponent(jButton3)))
-                .addGap(274, 274, 274))
+                .addGap(280, 280, 280))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(350, 350, 350))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,15 +293,19 @@ public class CargadeObjetos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtcastillo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(73, 73, 73)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btsuelo)
-                            .addComponent(jButton1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtsuelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(73, 73, 73)
+                                .addComponent(btsuelo)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtsuelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jButton1)
+                                .addGap(32, 32, 32)))
                         .addComponent(jButton2)
-                        .addGap(106, 106, 106)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton3)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -314,12 +346,26 @@ public class CargadeObjetos extends javax.swing.JFrame {
 
     private void btnmarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmarioActionPerformed
         // TODO add your handling code here:
-         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtmario.getText(),"MARITOO"));
+          if (verificadormarito==true) {
+                listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtmario.getText(),"MARITOO"));
+            } else {
+              JOptionPane.showMessageDialog(null, "SOLO PUEDES AGREGAR UNA SOLA VEZ A MARIOOOOOOOO ", "error", JOptionPane.ERROR_MESSAGE);
+          }
+          verificadormarito = false;
     }//GEN-LAST:event_btnmarioActionPerformed
 
     private void btncastilloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncastilloActionPerformed
         // TODO add your handling code here:
-         listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtcastillo.getText(),"CASTILLOOO"));
+         
+         
+         
+          if (verificadorcastillito==true) {
+              listitadepersonajes.agregarpersonajesalinicio(new Personaje (txtcastillo.getText(),"CASTILLOOO"));
+            } else {
+              JOptionPane.showMessageDialog(null, "SOLO PUEDES AGREGAR UNA SOLA VEZ A CAASTILLOOOOO ", "error", JOptionPane.ERROR_MESSAGE);
+          }
+          verificadorcastillito = false;
+         
     }//GEN-LAST:event_btncastilloActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -334,6 +380,17 @@ public class CargadeObjetos extends javax.swing.JFrame {
     private void txtsueloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsueloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtsueloActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        pilacola = true;
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        pilacola = false;
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

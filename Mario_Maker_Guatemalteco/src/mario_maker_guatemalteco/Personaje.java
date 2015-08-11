@@ -30,6 +30,38 @@ public class Personaje {
     int posicionx;
     int posiciony;
     String tipo;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getPosicionx() {
+        return posicionx;
+    }
+
+    public void setPosicionx(int posicionx) {
+        this.posicionx = posicionx;
+    }
+
+    public int getPosiciony() {
+        return posiciony;
+    }
+
+    public void setPosiciony(int posiciony) {
+        this.posiciony = posiciony;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
    
             
     

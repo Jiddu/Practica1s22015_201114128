@@ -5,11 +5,15 @@
  */
 package mario_maker_guatemalteco;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -118,17 +122,42 @@ public class Listadoble {
                 panelito.add(aux);
                // panelito.repaint ();
              
-                JLabel nombre = new JLabel();
+                final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
+                
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(150, 50+ (50*contador), 340,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 140,30 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
+                
+                 
+                 
+                
+                
+                
                 dibujitos.repaint();
-                
-                
-                   contador++;
-                
-                   panelito.repaint ();
-                   
+                contador++;
+                panelito.repaint ();
                 aux = aux.siguiente;
            
            
@@ -140,6 +169,14 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                  JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -148,6 +185,15 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                
+                  JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -156,6 +202,15 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                
+                  JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -164,6 +219,14 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                  JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -172,6 +235,15 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                  JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
+                
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -180,6 +252,14 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                
+                JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -188,6 +268,15 @@ public class Listadoble {
                 aux.setIcon(imagen);
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
+                
+                
+                  JLabel nombre = new JLabel();
+                nombre.setText(aux.personaje.nombre);
+                nombre.setBounds (40,50+ (50* contador), 50,32);
+                panelito.add(nombre);
+                dibujitos.repaint();
+                
+                
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -211,6 +300,45 @@ public class Listadoble {
     
     
     }
+    
+    
+    public String graficarestructura (){
+    String grafica = "";
+    int contadordegrafica = 1;
+    Nodo auxgrafiquita = ultimo;
+    String siguiente = "" , anterior = "";
+        
+    while (auxgrafiquita != null) {            
+            grafica = grafica + contadordegrafica+ "[label = "+ auxgrafiquita.personaje.nombre + auxgrafiquita.personaje.tipo+"] ; \n";
+            System.out.println(auxgrafiquita.personaje.nombre);
+            auxgrafiquita = auxgrafiquita.anterior;
+            contadordegrafica ++;
+            
+                    
+        }
+    
+        System.out.println(grafica);
+     contadordegrafica--;
+     
+     
+        for (int i = 1; i < contadordegrafica;) {
+         siguiente = siguiente+i+"->"+ ++i +"; \n" ;
+                 
+        }
+             
+        System.out.println(siguiente);
+    
+        for (int j = 0; j < contadordegrafica; ) {
+          anterior = anterior+ contadordegrafica+"->"+ (--contadordegrafica) +"; \n" ;  
+        }
+        
+        
+        System.out.println("digraph G {\n "+grafica+siguiente+anterior+"}");
+        System.out.println(anterior);
+        
+        return "digraph G {\n  "+ grafica+siguiente+anterior+"}"; 
+    }
+  
     
     }
  

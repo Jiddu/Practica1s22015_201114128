@@ -5,6 +5,8 @@
  */
 package mario_maker_guatemalteco;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author asus
@@ -16,6 +18,12 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        
+            Pinicio nuevojuego=new Pinicio();
+              this.add(nuevojuego,BorderLayout.CENTER);
+                this.pack();
+                 this.setSize(250,250);
+                //jLabel3.setVisible(false);
     }
 
     /**
@@ -41,6 +49,11 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         jButton2.setText("CREACION DE JUEGO");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("JUEGO");
 
@@ -49,25 +62,25 @@ public class Inicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
+                    .addComponent(jButton2)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addGap(45, 45, 45)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                        .addGap(41, 41, 41)
+                        .addComponent(jButton3)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(82, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addGap(35, 35, 35)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addGap(79, 79, 79))
         );
 
         pack();
@@ -82,6 +95,14 @@ public class Inicio extends javax.swing.JFrame {
         
         this.hide();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        CrearJuego juego = new CrearJuego();
+        juego.setVisible(true);
+        juego.show();
+        this.hide();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
