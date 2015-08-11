@@ -129,13 +129,13 @@ public class Listadoble {
                 
                 final JTextField modificarnombre = new JTextField();
                  modificarnombre.setText(aux.personaje.nombre);
-                 modificarnombre.setBounds(150, 50+ (50*contador), 340,30);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
                  panelito.add(modificarnombre);
                 
                 
                 JButton modificar = new JButton();
                 modificar.setText(aux.personaje.nombre);
-                modificar.setBounds(90, 50+ (50*contador), 140,30 );
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
                 panelito.add(modificar);
                 modificar.addActionListener(new ActionListener() {
 
@@ -170,11 +170,43 @@ public class Listadoble {
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
                 
-                  JLabel nombre = new JLabel();
+//                  JLabel nombre = new JLabel();
+//                nombre.setText(aux.personaje.nombre);
+//                nombre.setBounds (40,50+ (50* contador), 50,32);
+//                panelito.add(nombre);
+//                dibujitos.repaint();
+                
+                  final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
+                
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
+                
+                
+                
+                
                 
                 
                 panelito.repaint ();
@@ -186,12 +218,33 @@ public class Listadoble {
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
                 
-                
-                  JLabel nombre = new JLabel();
+          final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
+                
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
                 
                 
                 panelito.repaint ();
@@ -204,12 +257,33 @@ public class Listadoble {
                 panelito.add(aux);
                 
                 
-                  JLabel nombre = new JLabel();
+                 final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
                 
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
                 
                 panelito.repaint ();
                 contador++;
@@ -220,12 +294,33 @@ public class Listadoble {
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
                 
-                  JLabel nombre = new JLabel();
+                final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
                 
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
                 
                 panelito.repaint ();
                 contador++;
@@ -236,14 +331,33 @@ public class Listadoble {
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
                 
-                  JLabel nombre = new JLabel();
+                 final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
+                
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
                 
                 
-                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
                 panelito.repaint ();
                 contador++;
                  aux = aux.siguiente;
@@ -253,12 +367,33 @@ public class Listadoble {
                 aux.setBounds (10,50+ (50* contador), 32,32);
                 panelito.add(aux);
                 
-                
-                JLabel nombre = new JLabel();
+               final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
+                
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
                 
                 panelito.repaint ();
                 contador++;
@@ -270,12 +405,33 @@ public class Listadoble {
                 panelito.add(aux);
                 
                 
-                  JLabel nombre = new JLabel();
+                  final JLabel nombre = new JLabel();
                 nombre.setText(aux.personaje.nombre);
                 nombre.setBounds (40,50+ (50* contador), 50,32);
                 panelito.add(nombre);
-                dibujitos.repaint();
                 
+                final JTextField modificarnombre = new JTextField();
+                 modificarnombre.setText(aux.personaje.nombre);
+                 modificarnombre.setBounds(250, 50+ (50*contador), 75,30);
+                 panelito.add(modificarnombre);
+                
+                
+                JButton modificar = new JButton();
+                modificar.setText(aux.personaje.nombre);
+                modificar.setBounds(90, 50+ (50*contador), 150,35 );
+                panelito.add(modificar);
+                modificar.addActionListener(new ActionListener() {
+
+                  
+                    
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                       nombre.setText(modificarnombre.getText());
+                      //  aux.personaje.nombre= modificarnombre.getText();
+                        
+                    }
+                });
                 
                 panelito.repaint ();
                 contador++;
